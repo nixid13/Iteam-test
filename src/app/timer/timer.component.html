@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="time">
+    <p>{{timer.hours < 10 ? '0' : ''}}{{timer.hours}}:</p>
+    <p>{{timer.minutes < 10 ? '0' : ''}}{{timer.minutes}}:</p>
+    <p>{{timer.seconds < 10 ? '0' : ''}}{{timer.seconds}}</p>
+  </div>
+
+  <div class="buttons">
+    <button mat-raised-button color="primary" (click)="timerActive ? stop() : start()">Start/Stop</button>
+    <button mat-raised-button color="accent" (click)="wait($event)">Wait</button>
+    <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+  </div>
+</div>
+
+
