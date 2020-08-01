@@ -63,7 +63,6 @@ export class TimerComponent implements OnInit, OnDestroy {
   wait(e: Event) {
   this.timerService.waitTimer(e.target)
       .subscribe(_ => {
-        console.log(_)
         this.waiting = true;
         this.timerActive = false;
         if (this.timerSub) {
